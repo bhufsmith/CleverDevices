@@ -19,7 +19,7 @@ The package /src/test/java/com/cleverdevices/interview/codetest contains the cla
 * [Reverse Words Test](https://github.com/bhufsmith/CleverDevices/blob/master/src/test/java/com/cleverdevices/interview/codetest/stringhelper/ReverseOrderTest.java)
 
 ### Build
-This repository contains all the files needed to build and test the code. The project was set up using Gradle, and IntelliJ IDEA.  
+This repository contains all the files needed to build and test the code. The project was set up using Gradle, and IntelliJ IDEA, and written in Java against version 1.8  
 
 To build and run the tests, clone the repository to your machine. 
 Open a command terminal and browse to the directory for the project that you just cloned. 
