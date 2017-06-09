@@ -16,7 +16,7 @@ public class HufStackTest {
         HufStack objectStack2 = new HufStack<>();
 
         assert( objectStack != objectStack2 );
-        assert( objectStack.isEmpty() );
+        assert( objectStack.size() == 0 );
     }
 
     @Test
@@ -71,6 +71,12 @@ public class HufStackTest {
     }
 
     @Test
+    public void testPeek(){
+        HufStack<String> stringStack = new HufStack<>("Hello World");
+        assert ( stringStack.peek().equals("Hello World"));
+    }
+
+    @Test
     public void testEquals(){
         HufStack<String> stack1 = new HufStack<>("A", "B", "C");
         HufStack<String> stack2 = new HufStack<>("A", "B", "C");
@@ -105,5 +111,26 @@ public class HufStackTest {
         String stackString = stringStack.toString();
 
         assert ( stackString.equals("[]"));
+    }
+
+    @Test
+    public void testSize(){
+        HufStack<String> sizeTest = new HufStack<>("A", "B", "C");
+        assert (sizeTest.size() == 3);
+        sizeTest.pop();
+        assert (sizeTest.size() == 2);
+
+        sizeTest.push("SomeString");
+        assert (sizeTest.size() == 3);
+
+    }
+
+    @Test
+    public void testIsEmpty(){
+        HufStack<String> stringHufStack = new HufStack<>();
+        assert (stringHufStack.isEmpty());
+
+        stringHufStack.push("A");
+        assert ( ! stringHufStack.isEmpty() );
     }
 }
